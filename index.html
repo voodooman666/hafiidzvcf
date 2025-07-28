@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hafiidz Contact Card</title>
+  
+  <!-- Google Fonts: Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
       font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
     }
 
     #bg-video {
       position: fixed;
-      right: 0;
-      bottom: 0;
+      top: 0;
+      left: 0;
       min-width: 100%;
       min-height: 100%;
-      z-index: -1;
       object-fit: cover;
+      z-index: -1;
     }
 
-.content {
-  position: absolute;
-top: 50%;
-left: 10%;
-transform: translateY(-50%);
-  width: 90%;
-  max-width: 800px;
-  height: 500px; /* Fixed height */
-  background-image: url('Hafiidz.jpg);
-  background-repeat: no-repeat;
-  background-size: contain; /* << KEY CHANGE */
-  background-position: left;
-  background-color: transparent;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 20px;
-  box-sizing: border-box;
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      width: 90%;
+      max-width: 800px;
+      height: 500px;
+      background-image: url('hafiidz.jpg'); /* ✅ Must match the exact file name */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: scroll;
+      background-color: transparent;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .card-details {
@@ -72,41 +77,33 @@ transform: translateY(-50%);
       word-break: break-word;
     }
 
-    /* Responsive: Mobile view */
+    /* ✅ Mobile view */
     @media screen and (max-width: 600px) {
       .content {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        padding: 15px;
+        justify-content: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('hafiidz.jpg'); /* repeat it to ensure mobile loads it */
       }
 
       .card-details {
-        max-width: none;
-        width: 100%;
-        margin-top: 15px;
+        margin-top: 20px;
         text-align: center;
-      }
-
-      .card-details h2 {
-        font-size: 22px;
-      }
-
-      .card-details p, .card-details a {
-        font-size: 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Video Background -->
+  <!-- 🔊 Background Video -->
   <video autoplay muted loop id="bg-video">
-    <source src="crown.mp4" type="video/mp4">
+    <source src="crown.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Contact Card -->
+  <!-- 📇 Contact Card -->
   <div class="content">
     <div class="card-details">
       <h2>Hafiidz Amer</h2>
