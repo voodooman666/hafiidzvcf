@@ -77,22 +77,31 @@
       word-break: break-word;
     }
 
-    /* ✅ Mobile view */
     @media screen and (max-width: 600px) {
-      .content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: url('Hafiidz.jpg'); /* repeat it to ensure mobile loads it */
-      }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: none; /* Remove background on mobile */
+    width: 90%;
+    height: auto;
+  }
 
-      .card-details {
-        margin-top: 20px;
-        text-align: center;
-      }
-    }
+  .contact-photo {
+    display: block; /* Show the image on mobile */
+  }
+
+  .card-details {
+    margin-top: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 0 0 15px 15px;
+    padding: 15px;
+    width: 100%;
+  }
+}
   </style>
 </head>
 <body>
