@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hafiidz Contact Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+.content {
+  position: absolute;
+top: 50%;
+left: 10%;
+transform: translateY(-50%);
+  width: 90%;
+  max-width: 800px;
+  height: 500px; /* Fixed height */
+  background-image: url('hafiidz.jpg');
+  background-repeat: no-repeat;
+  background-size: contain; /* << KEY CHANGE */
+  background-position: left;
+  background-color: transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+    }
+
+    .card-details {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .card-details h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .card-details p {
+      margin: 5px 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .card-details a {
+      color: #FFD700;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    /* Responsive: Mobile view */
+    @media screen and (max-width: 600px) {
+      .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+      }
+
+      .card-details {
+        max-width: none;
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      .card-details h2 {
+        font-size: 22px;
+      }
+
+      .card-details p, .card-details a {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="crown.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Contact Card -->
+  <div class="content">
+    <div class="card-details">
+      <h2>Hafiidz Amer</h2>
+      <p><strong>Chief Strategic Officer</strong></p>
+      <p>Mobile: <a href="tel:+60122257252">+60 12-225 7252</a></p>
+      <p>Email: <a href="mailto:hafiidz.amer@exchange106.my">hafiidz.amer@exchange106.my</a></p>
+      <p>Web: <a href="https://www.exchange106.my" target="_blank">www.exchange106.my</a></p>
+      <br>
+      <p>Exchange106, Lingkaran TRX,<br>
+         Tun Razak Exchange,<br>
+         55188 Kuala Lumpur,<br>
+         Federal Territory of Kuala Lumpur</p>
+    </div>
+  </div>
+
+</body>
+</html>
