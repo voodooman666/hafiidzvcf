@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hafiidz Contact Card</title>
-  
-  <!-- Google Fonts: Montserrat -->
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -35,11 +35,10 @@
       width: 90%;
       max-width: 800px;
       height: 500px;
-      background-image: url('Hafiidz.jpg'); /* ✅ Must match the exact file name */
+      background-image: url('Hafiidz.jpg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      background-attachment: scroll;
       background-color: transparent;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.8);
@@ -77,31 +76,40 @@
       word-break: break-word;
     }
 
+    /* Mobile-specific contact image */
+    .contact-photo {
+      display: none;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px 15px 0 0;
+    }
+
+    /* ✅ Mobile view */
     @media screen and (max-width: 600px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: 'crown.mp4'; /* Remove background on mobile */
-    width: 90%;
-    height: auto;
-  }
+      .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: none; /* Disable background-image on mobile */
+        height: auto;
+      }
 
-  .contact-photo {
-    display: block; /* Show the image on mobile */
-  }
+      .contact-photo {
+        display: block; /* Show the image on mobile */
+      }
 
-  .card-details {
-    margin-top: 0;
-    text-align: center;
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 0 0 15px 15px;
-    padding: 15px;
-    width: 100%;
-  }
-}
+      .card-details {
+        margin-top: 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 0 0 15px 15px;
+        padding: 15px;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -114,13 +122,16 @@
 
   <!-- 📇 Contact Card -->
   <div class="content">
+    <!-- Mobile-only image -->
+    <img src="Hafiidz.jpg" alt="Hafiidz" class="contact-photo" />
+    
     <div class="card-details">
       <h2>Hafiidz Amer</h2>
       <p><strong>Chief Strategic Officer</strong></p>
       <p>Mobile: <a href="tel:+60122257252">+60 12-225 7252</a></p>
       <p>Email: <a href="mailto:hafiidz.amer@exchange106.my">hafiidz.amer@exchange106.my</a></p>
       <p>Web: <a href="https://www.exchange106.my" target="_blank">www.exchange106.my</a></p>
-      <br>
+      <br />
       <p>Exchange106, Lingkaran TRX,<br>
          Tun Razak Exchange,<br>
          55188 Kuala Lumpur,<br>
